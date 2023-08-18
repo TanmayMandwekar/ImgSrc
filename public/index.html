@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Imgsrc</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800&display=swap');
+    </style>
+    
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+  <script type="text/javascript" src="index.js"></script>
+  <script src="ks/jquery.js"></script>
+  <script>
+    const homeBtn = document.getElementById('homeGo');
+    if(homeBtn.click) {
+        const resultPage = document.getElementById('resultPage');
+        const homePage = document.getElementById('homePage');
+
+        // Unhide the #resultPage div
+        resultPage.style.display = 'block';
+
+        // Scroll to the #resultPage div
+        window.scrollTo({
+          top: resultPage.offsetTop,
+          behavior: 'smooth'
+         });
+
+         // Hide the #homepage div
+        homePage.style.display = 'none';
+    };
+  </script>
+</html>
